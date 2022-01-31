@@ -25,13 +25,17 @@ allure {
     }
 }
 
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
 dependencies {
-    testImplementation (
+    testImplementation(
             "com.codeborne:selenide:6.2.1",
             'com.github.javafaker:javafaker:1.0.2',
             "io.qameta.allure:allure-selenide:$allureVersion",
             "org.junit.jupiter:junit-jupiter-api:$junitVersion")
-    testRuntimeOnly (
+    testRuntimeOnly(
             "org.junit.jupiter:junit-jupiter-engine:$junitVersion",
             "org.slf4j:slf4j-simple:1.7.29")
 }
