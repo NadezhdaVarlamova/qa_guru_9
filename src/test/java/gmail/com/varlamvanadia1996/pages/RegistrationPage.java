@@ -27,7 +27,7 @@ public class RegistrationPage {
     public StudentData studentData = new StudentData();
 
     public RegistrationPage openPage() {
-        open("https://demoqa.com/automation-practice-form");
+        open("/automation-practice-form");
         return this;
     }
 
@@ -101,25 +101,9 @@ public class RegistrationPage {
                 text(studentData.hobbiesSports),
                 text(studentData.hobbiesReading),
                 text(studentData.hobbiesMusic),
-                text(studentData.fileName),
+//                text(studentData.fileName),
                 text(studentData.address),
                 text(studentData.state + " " + studentData.city));
         return this;
     }
-
-//    public RegistrationPage checkResults(String firstName, String lastName, String email, String gender, String phone, String bday, String subjects, String hobbies, String picture, String currentAddress, String state, String city) {
-//        popupResults.shouldBe(visible);
-//        tableResults.shouldHave(text(firstName + " " + lastName),
-//                text(email),
-//                text(gender),
-//                text(phone),
-//                text(bday),
-//                text(subjects),
-//                text(hobbies),
-//                text(picture),
-//                text(currentAddress),
-//                text(state + " " + city));
-//        return this;
-//    }
-
 }
